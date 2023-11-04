@@ -21,9 +21,8 @@ const userRoutes = require("./routes/users")
 const campgroundRoutes = require("./routes/campgrounds")
 const reviewRoutes = require("./routes/reviews")
 const MongoStore = require('connect-mongo');
-// const dbUrl = process.env.DB_URL
+const dbUrl = process.env.DB_URL
 
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp'
 main().catch(err => {
     console.log("OH NO MONGO CONNECTION ERROR!!!!")
     console.log(err)
