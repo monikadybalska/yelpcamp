@@ -132,8 +132,11 @@ app.use((req, res, next) => {
 });
 
 app.get("/fakeUser", async (req, res) => {
-  const user = new User({ email: "monika@admin.com", username: "admin" });
-  const newUser = await User.register(user, "adminpassword");
+  const user = new User({
+    email: "monika@example.com",
+    username: "monikaexample",
+  });
+  const newUser = await User.register(user, "examplepassword");
   res.send(newUser);
 });
 
